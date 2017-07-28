@@ -7,7 +7,7 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    MediaPlayer mediaPlayer;
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         pauseButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+                if (mediaPlayer.isPlaying())
                 mediaPlayer.pause();
             }
 
